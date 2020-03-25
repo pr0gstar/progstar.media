@@ -11,9 +11,13 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - name: install 👷‍♂️
+    - name: Checkout 🛎️
+      uses: actions/checkout@v2
+      with:
+        persist-credentials: false
+    - name: Install 👷‍♂️
       run: sudo gem install bundler jekyll
-    - name: build 🛠
+    - name: Build 🛠
       uses: gha-utilities/jekyll-build
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@releases/v3
