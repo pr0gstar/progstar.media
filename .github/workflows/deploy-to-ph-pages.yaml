@@ -11,7 +11,13 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - name: install jekyll
+    - name: install 👷‍♂️
       run: sudo gem install bundler jekyll
-    - name: build
+    - name: build 🛠
       run: jekyll build
+    - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: _site
