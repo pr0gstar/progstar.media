@@ -7,9 +7,8 @@ on:
      - develop
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
-    
     steps:
     - name: install
       run: sudo gem install bundler jekyll
