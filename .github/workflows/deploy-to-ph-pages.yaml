@@ -4,6 +4,7 @@ on:
   push:
     branches:
      - master
+     - develop
 
 jobs:
   build:
@@ -12,10 +13,3 @@ jobs:
     steps:
     - name: install jekyll
       run: gem install bundler jekyll
-    - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@master
-      env:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        BASE_BRANCH: "master"
-        BRANCH: "gh-pages"
-        FOLDER: "_site"
