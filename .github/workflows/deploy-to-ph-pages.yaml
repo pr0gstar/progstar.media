@@ -12,4 +12,4 @@ jobs:
     
     steps:
     - name: install jekyll
-      run: gem install bundler jekyll
+      run: sudo gem install bundler jekyll
