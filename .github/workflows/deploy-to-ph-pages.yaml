@@ -14,7 +14,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@master
     - name: Build 🛠
-      uses: gha-utilities/jekyll-build@v0.0.2
+      uses: gha-utilities/jekyll-build@master
     - name: Build and Deploy
       uses: JamesIves/github-pages-deploy-action@master
       env:
