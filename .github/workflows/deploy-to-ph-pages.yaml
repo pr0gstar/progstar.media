@@ -13,7 +13,7 @@ jobs:
       - name: ll
         run: ls -l
       - name: install jekyll
-        run: sudo apt-get install ruby-full build-essential zlib1g-dev && gem install jekyll bundler
+        run: sudo apt-get install ruby-full build-essential zlib1g-dev && sudo gem install jekyll bundler
       - name: Build and Deploy
         uses: JamesIves/github-pages-deploy-action@master
         env:
