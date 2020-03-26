@@ -13,7 +13,7 @@ jobs:
       - name: ll
         run: ls -l
       - name: Build Jekyll site.
-        uses: meitar/jekyll-builder-for-github-pages-action@v1
+        uses: meitar/jekyll-builder-for-github-pages-action@master
       - name: ll
         run: ls -l
       - name: Build and Deploy
