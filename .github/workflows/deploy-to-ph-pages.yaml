@@ -16,3 +16,5 @@ jobs:
           GITHUB_REPOSITORY: ${{ secrets.GITHUB_REPOSITORY }}
           GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
         uses: BryanSchuetz/jekyll-deploy-gh-pages@master
+      - name: ll
+        run: ls -l
