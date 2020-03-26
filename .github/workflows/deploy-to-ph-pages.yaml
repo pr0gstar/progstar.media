@@ -13,7 +13,7 @@ jobs:
       - name: ll
         run: ls -l
       - name: Run Jekyll
-        uses: docker://faph/action-jekyll:1.5
+        uses: helaili/jekyll-action@master
       - name: ll
         run: ls -l
       - name: Build and Deploy
