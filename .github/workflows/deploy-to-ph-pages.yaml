@@ -7,20 +7,18 @@ on:
      - develop
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
+    
     steps:
-    - name: Checkout 🛎️
+    - name: Checkout
       uses: actions/checkout@master
-      with:
-        persist-credentials: false
-    - name: Install 👷‍♂️
-      run: sudo gem install bundler jekyll
     - name: Build 🛠
       uses: gha-utilities/jekyll-build@v0.0.2
-    - name: Deploy 🚀
-      uses: JamesIves/github-pages-deploy-action@releases/v3
-      with:
+    - name: Build and Deploy
+      uses: JamesIves/github-pages-deploy-action@master
+      env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        BRANCH: gh-pages
-        FOLDER: _site
+        BASE_BRANCH: "master"
+        BRANCH: "gh-pages"
+        FOLDER: "_site"
