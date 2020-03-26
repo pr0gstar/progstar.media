@@ -14,7 +14,6 @@ jobs:
         run: ls -l
       - name: build
         uses: helaili/jekyll-action@master
-        run: jekyll build
       - name: Build and Deploy
         uses: JamesIves/github-pages-deploy-action@master
         env:
