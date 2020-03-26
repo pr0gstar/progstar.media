@@ -12,9 +12,8 @@ jobs:
       - uses: actions/checkout@master
       - name: ll
         run: ls -l
-      - name: install jekyll
-        run: sudo apt-get install ruby-full build-essential zlib1g-dev && sudo gem install jekyll bundler
       - name: build
+        uses: helaili/jekyll-action@master
         run: jekyll build
       - name: Build and Deploy
         uses: JamesIves/github-pages-deploy-action@master
