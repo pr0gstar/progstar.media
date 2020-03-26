@@ -13,7 +13,7 @@ jobs:
       - name: ll
         run: ls -l
       - name: install jekyll
-        run: sudo apt-get install ruby-full build-essential zlib1g-dev && sudo gem install jekyll bundler
+        run: sudo apt-get install ruby-full build-essential zlib1g-dev && sudo gem install jekyll bundler && jekyll build
       - name: Build and Deploy
         uses: JamesIves/github-pages-deploy-action@master
         env:
@@ -21,6 +21,6 @@ jobs:
           BASE_BRANCH: "master"
           BRANCH: "gh-pages"
           FOLDER: "_site"
-          BUILD_SCRIPT: "jekyll build"
+          # BUILD_SCRIPT: "jekyll build"
       - name: ll
         run: ls -l
