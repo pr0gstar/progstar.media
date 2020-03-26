@@ -12,8 +12,10 @@ jobs:
       - uses: actions/checkout@master
       - name: ll
         run: ls -l
-      - name: build
-        uses: helaili/jekyll-action@master
+      - name: Build Jekyll site.
+        uses: meitar/jekyll-builder-for-github-pages-action@v1
+      - name: ll
+        run: ls -l
       - name: Build and Deploy
         uses: JamesIves/github-pages-deploy-action@master
         env:
