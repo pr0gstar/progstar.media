@@ -12,8 +12,8 @@ jobs:
       - uses: actions/checkout@master
       - name: ll
         run: ls -l
-      - name: Build Jekyll site.
-        uses: meitar/jekyll-builder-for-github-pages-action@master
+      - name: Run Jekyll
+        uses: docker://faph/action-jekyll:1.5
       - name: ll
         run: ls -l
       - name: Build and Deploy
