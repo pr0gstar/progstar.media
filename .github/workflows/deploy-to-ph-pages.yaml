@@ -12,11 +12,15 @@ jobs:
       - uses: actions/checkout@master
       - name: ll
         run: ls -l
-      - name: Build & Deploy to GitHub Pages
-        env: 
-          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          GITHUB_REPOSITORY: ${{ secrets.GITHUB_REPOSITORY }}
-          GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
-        uses: BryanSchuetz/jekyll-deploy-gh-pages@v2.0
+      - name: install jekyll
+        run: sudo apt-get install ruby-full build-essential zlib1g-dev && gem install jekyll bundler
+      - name: Build and Deploy
+        uses: JamesIves/github-pages-deploy-action@master
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          BASE_BRANCH: "master"
+          BRANCH: "gh-pages"
+          FOLDER: "_site"
+          BUILD_SCRIPT: "jekyll build"
       - name: ll
         run: ls -l
