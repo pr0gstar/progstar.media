@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Heart and Soul
+title: <h1>progstar<div>•</div>media</h1>
 permalink: /
 ---
 
