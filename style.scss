@@ -78,16 +78,16 @@ a::after {
   content: "";
   position: absolute;
   z-index: -1;
-  top: 70%;
-  left: -0.1px;
-  right: -0.1px;
+  top: 75%;
+  left: -0.5px;
+  right: -0.5px;
   bottom: 0;
   transition: top .1s ease-in-out;
   background-color: rgba(254,164,234,0.5);
 }
 
 a:hover::after {
-  top: 0;
+  top: 35%;
 }
 
 ul, ol {
